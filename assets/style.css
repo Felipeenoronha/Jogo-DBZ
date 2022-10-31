@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+#full-game {
+   width: 35%;
+   height: 600px;
+   border: 1px solid;
+   margin: 0 auto;
+   margin-top: 5%;
+   position: relative;
+   overflow: hidden;
+}
+
+.back-img {
+
+   position: absolute;
+   width: 100%;
+   height: 600px;
+}
+
+.magic {
+   position: relative;
+   bottom: 50;
+   width: 150px;
+   animation: magic-animation 3s infinite linear ;
+}
+
+.character {
+    width: 150px;
+    position: relative;
+    left: -100px;
+
+}
+
+
+@keyframes magic-animation {
+    from {
+        right: -100%;
+    }
+
+    to {
+        right: 100%;
+    }
+}

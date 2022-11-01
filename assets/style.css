@@ -30,18 +30,16 @@
 }
 
 .character {
-    width: 150px;
     position: relative;
     left: -100px;
-
-}
-
-
+    width: 150px;
+    top: 0px;
+   }
+   
 @keyframes magic-animation {
     from {
         right: -100%;
     }
-
     to {
         right: 100%;
     }

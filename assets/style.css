@@ -6,7 +6,7 @@
 
 
 #full-game {
-   width: 35%;
+   width: 800px;
    height: 600px;
    border: 1px solid;
    margin: 0 auto;
@@ -16,7 +16,6 @@
 }
 
 .back-img {
-
    position: absolute;
    width: 100%;
    height: 600px;
@@ -25,14 +24,16 @@
 #magic {
    position: relative;
    bottom: 50;
+   height: 100px;
    width: 150px;
-   animation: magic-animation 1s infinite linear ;
+   animation: magic-animation 3s infinite linear ;
 }
 
 #character {
     position: relative;
-    left: -100px;
+    left: -140px;
     width: 150px;
+    height: 100px;
     top: 0px;
    }
    
@@ -44,3 +45,4 @@
         right: 100%;
     }
 }
+

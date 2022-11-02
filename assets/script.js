@@ -14,10 +14,10 @@ function moveTop() {
   
 function moveDown() {
 
-    let down = parseInt(window.getComputedStyle(character).getPropertyValue("down"));
+    let top = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
       top += 100;
-      if (down < 500) {
-        character.style.down = down + "px";
+      if (top < 600) {
+        character.style.top = top + "px";
      }
 
   }
@@ -39,7 +39,27 @@ document.addEventListener("keydown", keyDown);
 
   magic.addEventListener('animationiteration', () => {
     console.log(magic.style)
-  let random = Math.floor(Math.random()* 15); 
-  magic.style.top = random * 35 + 'px';
+  let random = Math.floor(Math.random()* 5); 
+  magic.style.top = random * 100 + 'px';
 
 });
+
+
+  setInterval(()=> {
+
+   let magicLeft = parseInt(window.getComputedStyle(magic).getPropertyValue('left'));
+   console.log(magicLeft)
+   let magicTop = parseInt(window.getComputedStyle(magic).getPropertyValue('top'));
+   console.log(magicTop)
+   let characterTop = parseInt(window.getComputedStyle(character).getPropertyValue('top'));
+   if (magicTop === characterTop && magicLeft >= 0 && magicLeft <= 100){
+    // if (window.confirm("Você realmente quer sair?")) {
+    //   window.open("../index.html", "Obrigado pela visita!");
+    // }
+    
+    
+    magic.style.animation = 'none';
+   }
+ },1)
+
+

@@ -1,13 +1,13 @@
-let character = document.getElementsByClassName("character");
-let magic = document.getElementsByClassName("magic");
+let character = documente.getElementById('character');
+let magic = document.getElementById("magic");
 
 
 function moveTop() {
 
     let top = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
-      top -= 0;
-      if (top >= 500) {
-        character.style.top = top + "px";
+      top -= 100;
+      if (top >= 0) {
+        character.style.top = top + "px";      
      }
   }
 
@@ -16,14 +16,15 @@ function moveDown() {
 
     let down = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
       top += 100;
-      if (down < 0) {
-        character.style.top = top + "px";
+      if (down < 500) {
+        character.style.top = down + "px";
      }
+
   }
 
   
 function keyDown(event) {
-    if (event.key === "ArrowTop") {
+    if (event.key === "ArrowUp") {
       moveTop();
     }
     if (event.key === "ArrowDown") {

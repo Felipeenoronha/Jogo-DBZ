@@ -22,14 +22,14 @@
    height: 600px;
 }
 
-.magic {
+#magic {
    position: relative;
    bottom: 50;
    width: 150px;
    animation: magic-animation 3s infinite linear ;
 }
 
-.character {
+#character {
     position: relative;
     left: -100px;
     width: 150px;

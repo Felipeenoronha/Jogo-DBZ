@@ -1,4 +1,4 @@
-let character = documente.getElementById('character');
+let character = document.getElementById('character');
 let magic = document.getElementById("magic");
 
 
@@ -14,10 +14,10 @@ function moveTop() {
   
 function moveDown() {
 
-    let down = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
+    let down = parseInt(window.getComputedStyle(character).getPropertyValue("down"));
       top += 100;
       if (down < 500) {
-        character.style.top = down + "px";
+        character.style.down = down + "px";
      }
 
   }
@@ -34,3 +34,12 @@ function keyDown(event) {
 
   
 document.addEventListener("keydown", keyDown);
+
+
+
+  magic.addEventListener('animationiteration', () => {
+    console.log(magic.style)
+  let random = Math.floor(Math.random()* 15); 
+  magic.style.top = random * 35 + 'px';
+
+});

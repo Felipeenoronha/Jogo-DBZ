@@ -1,5 +1,6 @@
 let character = document.getElementById('character');
 let magic = document.getElementById("magic");
+let counter = 0;
 
 
 function moveTop() {
@@ -41,23 +42,24 @@ document.addEventListener("keydown", keyDown);
     console.log(magic.style)
   let random = Math.floor(Math.random()* 5); 
   magic.style.top = random * 100 + 'px';
-
+  counter++;
 });
 
 
   setInterval(()=> {
 
    let magicLeft = parseInt(window.getComputedStyle(magic).getPropertyValue('left'));
-   console.log(magicLeft)
+   
    let magicTop = parseInt(window.getComputedStyle(magic).getPropertyValue('top'));
-   console.log(magicTop)
+
    let characterTop = parseInt(window.getComputedStyle(character).getPropertyValue('top'));
+
    if (magicTop === characterTop && magicLeft >= 0 && magicLeft <= 100){
-    // if (window.confirm("Você realmente quer sair?")) {
-    //   window.open("../index.html", "Obrigado pela visita!");
-    // }
-    
-    
+  
+    alert(`Game Over! Score: ${counter}.
+          Freeeza, estou nervoso!!!`);
+    location.reload();
+
     magic.style.animation = 'none';
    }
  },1)

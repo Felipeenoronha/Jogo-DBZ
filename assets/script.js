@@ -3,6 +3,10 @@ let magic = document.getElementById("magic");
 let counter = 0;
 
 
+
+
+
+
 function moveTop() {
 
     let top = parseInt(window.getComputedStyle(character).getPropertyValue("top"));

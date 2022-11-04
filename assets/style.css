@@ -3,6 +3,7 @@ html{
     padding: 0;
     box-sizing: border-box;
     background: linear-gradient(#d46a35,#e80c0c);
+    height: 100%;
    
 }
 
@@ -21,7 +22,7 @@ html{
     bottom: 50;
     height: 100px;
     width: 150px;
-    animation: magic-animation 1.2s infinite linear ;
+    animation: magic-animation 1s infinite linear ;
  }
  
  #character {
